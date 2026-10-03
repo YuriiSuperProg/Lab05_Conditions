@@ -36,25 +36,53 @@
 
 ///////////////////////////////////
 
-Console.Write("Введите количество посещений (из 19): ");
-int attedance = int.Parse(Console.ReadLine());
-Console.Write("Введите средний балл по практике: ");
-double practiceGpa = double.Parse(Console.ReadLine());
-bool goodAttedance = attedance >= 14;
-bool goodGrades = practiceGpa >= 3.0;
-if (goodAttedance && goodGrades)
-{
-    Console.WriteLine("+ Допуск к экзамену разрешен. ");
-}
-else if (!goodAttedance && goodGrades)
-{
-    Console.WriteLine("- Недостаточно посещений. Нужно отработать пропуски.");
-}
-else if (goodAttedance && !goodGrades)
-{
-    Console.WriteLine("- Низкий балл по практике. Нужно пересдать работы.");
-}
-else
-{
-    Console.WriteLine("- Проблемы и с посещаемостью, и с оценками. Срочно к преподавателю.");
-}
+// Console.Write("Введите количество посещений (из 19): ");
+// int attedance = int.Parse(Console.ReadLine());
+// Console.Write("Введите средний балл по практике: ");
+// double practiceGpa = double.Parse(Console.ReadLine());
+// bool goodAttedance = attedance >= 14;
+// bool goodGrades = practiceGpa >= 3.0;
+// if (goodAttedance && goodGrades)
+// {
+//     Console.WriteLine("+ Допуск к экзамену разрешен. ");
+// }
+// else if (!goodAttedance && goodGrades)
+// {
+//     Console.WriteLine("- Недостаточно посещений. Нужно отработать пропуски.");
+// }
+// else if (goodAttedance && !goodGrades)
+// {
+//     Console.WriteLine("- Низкий балл по практике. Нужно пересдать работы.");
+// }
+// else
+// {
+//     Console.WriteLine("- Проблемы и с посещаемостью, и с оценками. Срочно к преподавателю.");
+// }
+
+///////////////////////////////////
+
+// string result1;
+// if (score >= 60)
+// {
+//     result1 = "Зачет";
+// }
+// else
+// {
+//     result1 = "Незачет";
+// }
+// string result = StringComparer >= 60 ? "Зачет" : "Незачет";
+
+///////////////////////////////////
+
+Console.Write("Введите ваш возраст: ");
+int age = int.Parse(Console.ReadLine());
+string ageGroup = age >= 18 ? "Совершеннолетний" : "Несовершеннолетний";
+Console.WriteLine($"Вы {ageGroup}.");
+Console.WriteLine("\nВведите температуру за окном (°C)");
+double temp = double.Parse(Console.ReadLine());
+string weather = temp >= 20 ? "Тепло" : (temp >= 0 ? "Прохладно" : "Мороз");
+Console.WriteLine($"За окном {weather}.");
+Console.Write("\nВведите число: ");
+int n = int.Parse(Console.ReadLine());
+string parity = n % 2 == 0 ? "Четное" : "Нечетное";
+Console.WriteLine($"Число {n} - {parity}");
